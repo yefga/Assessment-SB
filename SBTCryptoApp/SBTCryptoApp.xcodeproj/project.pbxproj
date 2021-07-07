@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F90426C269588D700B2A550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90426B269588D700B2A550 /* AppDelegate.swift */; };
+		8F90426E269588D700B2A550 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90426D269588D700B2A550 /* SceneDelegate.swift */; };
+		8F904270269588D700B2A550 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90426F269588D700B2A550 /* ViewController.swift */; };
+		8F904273269588D700B2A550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F904271269588D700B2A550 /* Main.storyboard */; };
+		8F904275269588D900B2A550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F904274269588D900B2A550 /* Assets.xcassets */; };
+		8F904278269588D900B2A550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F904276269588D900B2A550 /* LaunchScreen.storyboard */; };
+		8F904283269588DA00B2A550 /* SBTCryptoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F904282269588DA00B2A550 /* SBTCryptoAppTests.swift */; };
+		8F90428E269588DA00B2A550 /* SBTCryptoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90428D269588DA00B2A550 /* SBTCryptoAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F90427F269588DA00B2A550 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F904260269588D700B2A550 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F904267269588D700B2A550;
+			remoteInfo = SBTCryptoApp;
+		};
+		8F90428A269588DA00B2A550 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F904260269588D700B2A550 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F904267269588D700B2A550;
+			remoteInfo = SBTCryptoApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8F904268269588D700B2A550 /* SBTCryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBTCryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F90426B269588D700B2A550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8F90426D269588D700B2A550 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8F90426F269588D700B2A550 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8F904272269588D700B2A550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8F904274269588D900B2A550 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F904277269588D900B2A550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F904279269588D900B2A550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F90427E269588DA00B2A550 /* SBTCryptoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBTCryptoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F904282269588DA00B2A550 /* SBTCryptoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTCryptoAppTests.swift; sourceTree = "<group>"; };
+		8F904284269588DA00B2A550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F904289269588DA00B2A550 /* SBTCryptoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBTCryptoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F90428D269588DA00B2A550 /* SBTCryptoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTCryptoAppUITests.swift; sourceTree = "<group>"; };
+		8F90428F269588DA00B2A550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F904265269588D700B2A550 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F90427B269588D900B2A550 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F904286269588DA00B2A550 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F90425F269588D700B2A550 = {
+			isa = PBXGroup;
+			children = (
+				8F90426A269588D700B2A550 /* SBTCryptoApp */,
+				8F904281269588DA00B2A550 /* SBTCryptoAppTests */,
+				8F90428C269588DA00B2A550 /* SBTCryptoAppUITests */,
+				8F904269269588D700B2A550 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F904269269588D700B2A550 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F904268269588D700B2A550 /* SBTCryptoApp.app */,
+				8F90427E269588DA00B2A550 /* SBTCryptoAppTests.xctest */,
+				8F904289269588DA00B2A550 /* SBTCryptoAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F90426A269588D700B2A550 /* SBTCryptoApp */ = {
+			isa = PBXGroup;
+			children = (
+				8F90426B269588D700B2A550 /* AppDelegate.swift */,
+				8F90426D269588D700B2A550 /* SceneDelegate.swift */,
+				8F90426F269588D700B2A550 /* ViewController.swift */,
+				8F904271269588D700B2A550 /* Main.storyboard */,
+				8F904274269588D900B2A550 /* Assets.xcassets */,
+				8F904276269588D900B2A550 /* LaunchScreen.storyboard */,
+				8F904279269588D900B2A550 /* Info.plist */,
+			);
+			path = SBTCryptoApp;
+			sourceTree = "<group>";
+		};
+		8F904281269588DA00B2A550 /* SBTCryptoAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F904282269588DA00B2A550 /* SBTCryptoAppTests.swift */,
+				8F904284269588DA00B2A550 /* Info.plist */,
+			);
+			path = SBTCryptoAppTests;
+			sourceTree = "<group>";
+		};
+		8F90428C269588DA00B2A550 /* SBTCryptoAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8F90428D269588DA00B2A550 /* SBTCryptoAppUITests.swift */,
+				8F90428F269588DA00B2A550 /* Info.plist */,
+			);
+			path = SBTCryptoAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F904267269588D700B2A550 /* SBTCryptoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F904292269588DA00B2A550 /* Build configuration list for PBXNativeTarget "SBTCryptoApp" */;
+			buildPhases = (
+				8F904264269588D700B2A550 /* Sources */,
+				8F904265269588D700B2A550 /* Frameworks */,
+				8F904266269588D700B2A550 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SBTCryptoApp;
+			productName = SBTCryptoApp;
+			productReference = 8F904268269588D700B2A550 /* SBTCryptoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8F90427D269588D900B2A550 /* SBTCryptoAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F904295269588DA00B2A550 /* Build configuration list for PBXNativeTarget "SBTCryptoAppTests" */;
+			buildPhases = (
+				8F90427A269588D900B2A550 /* Sources */,
+				8F90427B269588D900B2A550 /* Frameworks */,
+				8F90427C269588D900B2A550 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F904280269588DA00B2A550 /* PBXTargetDependency */,
+			);
+			name = SBTCryptoAppTests;
+			productName = SBTCryptoAppTests;
+			productReference = 8F90427E269588DA00B2A550 /* SBTCryptoAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8F904288269588DA00B2A550 /* SBTCryptoAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F904298269588DA00B2A550 /* Build configuration list for PBXNativeTarget "SBTCryptoAppUITests" */;
+			buildPhases = (
+				8F904285269588DA00B2A550 /* Sources */,
+				8F904286269588DA00B2A550 /* Frameworks */,
+				8F904287269588DA00B2A550 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F90428B269588DA00B2A550 /* PBXTargetDependency */,
+			);
+			name = SBTCryptoAppUITests;
+			productName = SBTCryptoAppUITests;
+			productReference = 8F904289269588DA00B2A550 /* SBTCryptoAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F904260269588D700B2A550 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					8F904267269588D700B2A550 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					8F90427D269588D900B2A550 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 8F904267269588D700B2A550;
+					};
+					8F904288269588DA00B2A550 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 8F904267269588D700B2A550;
+					};
+				};
+			};
+			buildConfigurationList = 8F904263269588D700B2A550 /* Build configuration list for PBXProject "SBTCryptoApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F90425F269588D700B2A550;
+			productRefGroup = 8F904269269588D700B2A550 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F904267269588D700B2A550 /* SBTCryptoApp */,
+				8F90427D269588D900B2A550 /* SBTCryptoAppTests */,
+				8F904288269588DA00B2A550 /* SBTCryptoAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F904266269588D700B2A550 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F904278269588D900B2A550 /* LaunchScreen.storyboard in Resources */,
+				8F904275269588D900B2A550 /* Assets.xcassets in Resources */,
+				8F904273269588D700B2A550 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F90427C269588D900B2A550 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F904287269588DA00B2A550 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F904264269588D700B2A550 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F904270269588D700B2A550 /* ViewController.swift in Sources */,
+				8F90426C269588D700B2A550 /* AppDelegate.swift in Sources */,
+				8F90426E269588D700B2A550 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F90427A269588D900B2A550 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F904283269588DA00B2A550 /* SBTCryptoAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F904285269588DA00B2A550 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F90428E269588DA00B2A550 /* SBTCryptoAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F904280269588DA00B2A550 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F904267269588D700B2A550 /* SBTCryptoApp */;
+			targetProxy = 8F90427F269588DA00B2A550 /* PBXContainerItemProxy */;
+		};
+		8F90428B269588DA00B2A550 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F904267269588D700B2A550 /* SBTCryptoApp */;
+			targetProxy = 8F90428A269588DA00B2A550 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8F904271269588D700B2A550 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F904272269588D700B2A550 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8F904276269588D900B2A550 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F904277269588D900B2A550 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F904290269588DA00B2A550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8F904291269588DA00B2A550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F904293269588DA00B2A550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YG25GXN392;
+				INFOPLIST_FILE = SBTCryptoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yefga.SBTCryptoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F904294269588DA00B2A550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YG25GXN392;
+				INFOPLIST_FILE = SBTCryptoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yefga.SBTCryptoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8F904296269588DA00B2A550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YG25GXN392;
+				INFOPLIST_FILE = SBTCryptoAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yefga.SBTCryptoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SBTCryptoApp.app/SBTCryptoApp";
+			};
+			name = Debug;
+		};
+		8F904297269588DA00B2A550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YG25GXN392;
+				INFOPLIST_FILE = SBTCryptoAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yefga.SBTCryptoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SBTCryptoApp.app/SBTCryptoApp";
+			};
+			name = Release;
+		};
+		8F904299269588DA00B2A550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YG25GXN392;
+				INFOPLIST_FILE = SBTCryptoAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yefga.SBTCryptoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SBTCryptoApp;
+			};
+			name = Debug;
+		};
+		8F90429A269588DA00B2A550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YG25GXN392;
+				INFOPLIST_FILE = SBTCryptoAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yefga.SBTCryptoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SBTCryptoApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F904263269588D700B2A550 /* Build configuration list for PBXProject "SBTCryptoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F904290269588DA00B2A550 /* Debug */,
+				8F904291269588DA00B2A550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F904292269588DA00B2A550 /* Build configuration list for PBXNativeTarget "SBTCryptoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F904293269588DA00B2A550 /* Debug */,
+				8F904294269588DA00B2A550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F904295269588DA00B2A550 /* Build configuration list for PBXNativeTarget "SBTCryptoAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F904296269588DA00B2A550 /* Debug */,
+				8F904297269588DA00B2A550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F904298269588DA00B2A550 /* Build configuration list for PBXNativeTarget "SBTCryptoAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F904299269588DA00B2A550 /* Debug */,
+				8F90429A269588DA00B2A550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F904260269588D700B2A550 /* Project object */;
+}
