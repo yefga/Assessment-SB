@@ -14,6 +14,7 @@
 		8F904283269588DA00B2A550 /* SBTCryptoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F904282269588DA00B2A550 /* SBTCryptoAppTests.swift */; };
 		8F90428E269588DA00B2A550 /* SBTCryptoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90428D269588DA00B2A550 /* SBTCryptoAppUITests.swift */; };
 		8F9042A22695908000B2A550 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9042A12695908000B2A550 /* NetworkRouter.swift */; };
+		8F9042A4269590BF00B2A550 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9042A3269590BF00B2A550 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		8F90428D269588DA00B2A550 /* SBTCryptoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTCryptoAppUITests.swift; sourceTree = "<group>"; };
 		8F90428F269588DA00B2A550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F9042A12695908000B2A550 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		8F9042A3269590BF00B2A550 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D7A08B0386ABE74222CE0EEC /* Pods-SBTCryptoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBTCryptoApp.release.xcconfig"; path = "Target Support Files/Pods-SBTCryptoApp/Pods-SBTCryptoApp.release.xcconfig"; sourceTree = "<group>"; };
 		DCA201FFB5C5AFA2A9FD2B8D /* Pods_SBTCryptoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SBTCryptoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -184,6 +186,7 @@
 		8F90429F26958FBC00B2A550 /* Configs */ = {
 			isa = PBXGroup;
 			children = (
+				8F9042A3269590BF00B2A550 /* Constant.swift */,
 			);
 			path = Configs;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			files = (
 				8F90426C269588D700B2A550 /* AppDelegate.swift in Sources */,
 				8F9042A22695908000B2A550 /* NetworkRouter.swift in Sources */,
+				8F9042A4269590BF00B2A550 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
