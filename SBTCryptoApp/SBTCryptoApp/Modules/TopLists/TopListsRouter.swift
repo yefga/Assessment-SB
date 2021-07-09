@@ -56,7 +56,7 @@ class TopListsRouter: TopListsPresenterToRouterProtocol {
         return view
     }
     
-    func goTo(viewController: TopListsViewController) {
+    func goToLatestNews(viewController: TopListsViewController) {
         
     }
 }

@@ -77,5 +77,5 @@ protocol TopListsPresenterToRouterProtocol: AnyObject {
     /// Add here your methods to communicate between PRESENTER -> ROUTER (WIREFRAME)
     
     func createModule()-> TopListsViewController
-    func goTo(viewController: TopListsViewController)
+    func goToLatestNews(viewController: TopListsViewController)
 }
