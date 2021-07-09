@@ -109,6 +109,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8F3732F82698439800090615 /* TopLists */ = {
+			isa = PBXGroup;
+			children = (
+				8F3732F026983DE100090615 /* TopListsViewController.swift */,
+				8F3732ED26983DE100090615 /* TopListsInteractor.swift */,
+				8F3732F126983DE100090615 /* TopListsPresenter.swift */,
+				8F3732EF26983DE100090615 /* TopListsProtocols.swift */,
+				8F3732EC26983DE100090615 /* TopListsRouter.swift */,
+			);
+			path = TopLists;
+			sourceTree = "<group>";
+		};
 		8F90425F269588D700B2A550 = {
 			isa = PBXGroup;
 			children = (
@@ -183,11 +195,7 @@
 		8F90429D26958FB200B2A550 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				8F3732F026983DE100090615 /* TopListsViewController.swift */,
-				8F3732ED26983DE100090615 /* TopListsInteractor.swift */,
-				8F3732F126983DE100090615 /* TopListsPresenter.swift */,
-				8F3732EF26983DE100090615 /* TopListsProtocols.swift */,
-				8F3732EC26983DE100090615 /* TopListsRouter.swift */,
+				8F3732F82698439800090615 /* TopLists */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
