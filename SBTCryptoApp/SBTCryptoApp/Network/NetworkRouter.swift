@@ -21,7 +21,7 @@ public enum NetworkRouter: URLRequestConvertible {
     var path: String {
         switch self {
         case .topList:
-            return "data/top/totaltoptiervolfull"
+            return "top/totaltoptiervolfull"
         case .latestNews:
             return "v2/news/?lang=EN"
         }
