@@ -10,5 +10,6 @@ target 'SBTCryptoApp' do
     project 'SBTCryptoApp/SBTCryptoApp.project'
     pod 'Alamofire'
     pod 'AlamofireObjectMapper'
+    pod 'AlamofireNetworkActivityLogger'
 end
 
