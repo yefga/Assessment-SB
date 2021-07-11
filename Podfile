@@ -11,5 +11,11 @@ target 'SBTCryptoApp' do
     pod 'Alamofire'
     pod 'AlamofireObjectMapper'
     pod 'AlamofireNetworkActivityLogger'
+
+    target 'SBTCryptoAppTests' do
+        inherit! :search_paths
+        pod 'AlamofireObjectMapper'
+    end
+
 end
 

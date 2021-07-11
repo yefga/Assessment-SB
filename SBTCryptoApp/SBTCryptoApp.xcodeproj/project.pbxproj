@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29C359F435E5BA9C71A8AB0B /* Pods_SBTCryptoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA201FFB5C5AFA2A9FD2B8D /* Pods_SBTCryptoApp.framework */; };
+		6B83A32878531915A5B567BE /* Pods_SBTCryptoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6913CF768874BEDE1922C8 /* Pods_SBTCryptoAppTests.framework */; };
 		8F3732E7269832EF00090615 /* TopListsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3732E6269832EF00090615 /* TopListsViewController.xib */; };
 		8F3732F226983DE100090615 /* TopListsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3732ED26983DE100090615 /* TopListsInteractor.swift */; };
 		8F3732F326983DE100090615 /* TopListsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3732F126983DE100090615 /* TopListsPresenter.swift */; };
@@ -16,10 +17,14 @@
 		8F3732F726983DE100090615 /* TopListsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3732EC26983DE100090615 /* TopListsRouter.swift */; };
 		8F3732FB269847D300090615 /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3732FA269847D300090615 /* CryptoCurrency.swift */; };
 		8F3732FD2699BF6B00090615 /* MapArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3732FC2699BF6B00090615 /* MapArray.swift */; };
+		8F3733022699CCF600090615 /* MapArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3733012699CCF600090615 /* MapArrayTests.swift */; };
+		8F3733042699EFA700090615 /* TopLists.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F3733032699EFA700090615 /* TopLists.json */; };
+		8F3733062699F34900090615 /* TopListsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3733052699F34900090615 /* TopListsInteractorTests.swift */; };
+		8F3733082699F3E800090615 /* TopListsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3733072699F3E800090615 /* TopListsPresenterTests.swift */; };
+		8F37330A2699F3F500090615 /* TopListsRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3733092699F3F500090615 /* TopListsRouterTests.swift */; };
 		8F90426C269588D700B2A550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90426B269588D700B2A550 /* AppDelegate.swift */; };
 		8F904275269588D900B2A550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F904274269588D900B2A550 /* Assets.xcassets */; };
 		8F904278269588D900B2A550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F904276269588D900B2A550 /* LaunchScreen.storyboard */; };
-		8F904283269588DA00B2A550 /* SBTCryptoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F904282269588DA00B2A550 /* SBTCryptoAppTests.swift */; };
 		8F90428E269588DA00B2A550 /* SBTCryptoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90428D269588DA00B2A550 /* SBTCryptoAppUITests.swift */; };
 		8F9042A22695908000B2A550 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9042A12695908000B2A550 /* NetworkRouter.swift */; };
 		8F9042A4269590BF00B2A550 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9042A3269590BF00B2A550 /* Constant.swift */; };
@@ -43,7 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		171B683A3EB23E3516C79E6E /* Pods-SBTCryptoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBTCryptoAppTests.release.xcconfig"; path = "Target Support Files/Pods-SBTCryptoAppTests/Pods-SBTCryptoAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		6A6913CF768874BEDE1922C8 /* Pods_SBTCryptoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SBTCryptoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF73F57C2BAB70FC55B8873 /* Pods-SBTCryptoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBTCryptoApp.debug.xcconfig"; path = "Target Support Files/Pods-SBTCryptoApp/Pods-SBTCryptoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		77617F58D4F9FCE51DFCA099 /* Pods-SBTCryptoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBTCryptoAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SBTCryptoAppTests/Pods-SBTCryptoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F3732E6269832EF00090615 /* TopListsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopListsViewController.xib; sourceTree = "<group>"; };
 		8F3732EC26983DE100090615 /* TopListsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsRouter.swift; sourceTree = "<group>"; };
 		8F3732ED26983DE100090615 /* TopListsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsInteractor.swift; sourceTree = "<group>"; };
@@ -52,13 +60,17 @@
 		8F3732F126983DE100090615 /* TopListsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsPresenter.swift; sourceTree = "<group>"; };
 		8F3732FA269847D300090615 /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
 		8F3732FC2699BF6B00090615 /* MapArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapArray.swift; sourceTree = "<group>"; };
+		8F3733012699CCF600090615 /* MapArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapArrayTests.swift; sourceTree = "<group>"; };
+		8F3733032699EFA700090615 /* TopLists.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TopLists.json; sourceTree = "<group>"; };
+		8F3733052699F34900090615 /* TopListsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsInteractorTests.swift; sourceTree = "<group>"; };
+		8F3733072699F3E800090615 /* TopListsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsPresenterTests.swift; sourceTree = "<group>"; };
+		8F3733092699F3F500090615 /* TopListsRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsRouterTests.swift; sourceTree = "<group>"; };
 		8F904268269588D700B2A550 /* SBTCryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBTCryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F90426B269588D700B2A550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F904274269588D900B2A550 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F904277269588D900B2A550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F904279269588D900B2A550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F90427E269588DA00B2A550 /* SBTCryptoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBTCryptoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F904282269588DA00B2A550 /* SBTCryptoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTCryptoAppTests.swift; sourceTree = "<group>"; };
 		8F904284269588DA00B2A550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F904289269588DA00B2A550 /* SBTCryptoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBTCryptoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F90428D269588DA00B2A550 /* SBTCryptoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTCryptoAppUITests.swift; sourceTree = "<group>"; };
@@ -82,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B83A32878531915A5B567BE /* Pods_SBTCryptoAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +113,8 @@
 			children = (
 				6FF73F57C2BAB70FC55B8873 /* Pods-SBTCryptoApp.debug.xcconfig */,
 				D7A08B0386ABE74222CE0EEC /* Pods-SBTCryptoApp.release.xcconfig */,
+				77617F58D4F9FCE51DFCA099 /* Pods-SBTCryptoAppTests.debug.xcconfig */,
+				171B683A3EB23E3516C79E6E /* Pods-SBTCryptoAppTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
@@ -109,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				DCA201FFB5C5AFA2A9FD2B8D /* Pods_SBTCryptoApp.framework */,
+				6A6913CF768874BEDE1922C8 /* Pods_SBTCryptoAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -132,6 +148,25 @@
 				8F3732FC2699BF6B00090615 /* MapArray.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		8F3733002699CCD500090615 /* EntityTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F3733012699CCF600090615 /* MapArrayTests.swift */,
+				8F3733032699EFA700090615 /* TopLists.json */,
+			);
+			path = EntityTests;
+			sourceTree = "<group>";
+		};
+		8F37330B2699F3FF00090615 /* TopListsTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F3733092699F3F500090615 /* TopListsRouterTests.swift */,
+				8F3733072699F3E800090615 /* TopListsPresenterTests.swift */,
+				8F3733052699F34900090615 /* TopListsInteractorTests.swift */,
+			);
+			path = TopListsTests;
 			sourceTree = "<group>";
 		};
 		8F90425F269588D700B2A550 = {
@@ -173,7 +208,8 @@
 		8F904281269588DA00B2A550 /* SBTCryptoAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				8F904282269588DA00B2A550 /* SBTCryptoAppTests.swift */,
+				8F37330B2699F3FF00090615 /* TopListsTests */,
+				8F3733002699CCD500090615 /* EntityTests */,
 				8F904284269588DA00B2A550 /* Info.plist */,
 			);
 			path = SBTCryptoAppTests;
@@ -264,9 +300,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F904295269588DA00B2A550 /* Build configuration list for PBXNativeTarget "SBTCryptoAppTests" */;
 			buildPhases = (
+				00A9B26A7DDF79A3036B62E8 /* [CP] Check Pods Manifest.lock */,
 				8F90427A269588D900B2A550 /* Sources */,
 				8F90427B269588D900B2A550 /* Frameworks */,
 				8F90427C269588D900B2A550 /* Resources */,
+				A7B58BF6D46DDF297D5E888F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -353,6 +391,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F3733042699EFA700090615 /* TopLists.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +405,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		00A9B26A7DDF79A3036B62E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SBTCryptoAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		768C0434DAAA5A72280A7D93 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -405,6 +466,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SBTCryptoApp/Pods-SBTCryptoApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A7B58BF6D46DDF297D5E888F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SBTCryptoAppTests/Pods-SBTCryptoAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SBTCryptoAppTests/Pods-SBTCryptoAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SBTCryptoAppTests/Pods-SBTCryptoAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -429,7 +507,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F904283269588DA00B2A550 /* SBTCryptoAppTests.swift in Sources */,
+				8F3733062699F34900090615 /* TopListsInteractorTests.swift in Sources */,
+				8F3733022699CCF600090615 /* MapArrayTests.swift in Sources */,
+				8F37330A2699F3F500090615 /* TopListsRouterTests.swift in Sources */,
+				8F3733082699F3E800090615 /* TopListsPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +707,7 @@
 		};
 		8F904296269588DA00B2A550 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77617F58D4F9FCE51DFCA099 /* Pods-SBTCryptoAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -648,6 +730,7 @@
 		};
 		8F904297269588DA00B2A550 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 171B683A3EB23E3516C79E6E /* Pods-SBTCryptoAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
