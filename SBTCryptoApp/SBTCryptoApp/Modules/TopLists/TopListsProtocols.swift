@@ -37,11 +37,12 @@ import Foundation
 //MARK: Presenter
 protocol TopListsViewToPresenterProtocol: AnyObject {
 
-    var view: TopListsPresenterToViewProtocol?{ get set }
+    var view: TopListsPresenterToViewProtocol? { get set }
     var interactor: TopListsPresenterToInteractorProtocol? {get set}
     var router: TopListsPresenterToRouterProtocol? {get set}
 
     /// Add here your methods to communicate between VIEW -> PRESENTER
+    var totalItems: Int { get }
     func fetchTopLists(limit: Int, page: Int)
     
 }
@@ -51,7 +52,7 @@ protocol TopListsPresenterToViewProtocol: AnyObject {
     
     /// Add here your methods to communicate between PRESENTER -> VIEW
     func showLoading()
-    
+    func refresh()
 }
 
 //MARK: Interactor - Input
@@ -67,8 +68,9 @@ protocol TopListsPresenterToInteractorProtocol: AnyObject {
 //MARK: Interactor - Output
 protocol TopListsInteractorToPresenterProtocol: AnyObject {
 
-    /// Add here your methods to communicate between INTERACTOR -> PRESENTER    
-  
+    /// Add here your methods to communicate between INTERACTOR -> PRESENTER
+    func getItems(items: [CryptoCurrency]?, message: String?)
+    func gotFailed(_ data: Data?, _ error: Error)
 }
 
 //MARK: Router
