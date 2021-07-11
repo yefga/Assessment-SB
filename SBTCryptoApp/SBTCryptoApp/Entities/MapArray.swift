@@ -8,8 +8,7 @@
 import ObjectMapper
 
 public class MapArray<T: Mappable>: Mappable {
-    public var message = ""
-    public var response = ""
+    public var message: String = ""
     public var data: [T]?
     
     //Impl. of Mappable protocol
@@ -19,7 +18,6 @@ public class MapArray<T: Mappable>: Mappable {
     
     public func mapping(map: Map) {
         message     <- map["Message"]
-        response <- map["Response"]
         data           <- map["Data"]
     }
 }
