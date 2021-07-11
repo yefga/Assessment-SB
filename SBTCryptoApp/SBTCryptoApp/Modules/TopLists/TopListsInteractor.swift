@@ -40,7 +40,21 @@ class TopListsInteractor: TopListsPresenterToInteractorProtocol {
     weak var presenter: TopListsInteractorToPresenterProtocol?
     
     func fetchTopLists(limit: Int, page: Int) {
-        Alamofire.Session.default.request(NetworkRouter.topList(limit: limit, page: page)).validate()
+        Alamofire
+            .Session
+            .default
+            .request(NetworkRouter.topList(limit: limit, page: page))
+            .validate()
+            .responseObject { (response: AFDataResponse<MapArray<CryptoCurrency>>) in
+                
+                switch response.result {
+                case .success(let model):
+                    self.presenter?.getItems(items: model.data, message: model.message)
+                    
+                case .failure(let error):
+                    self.presenter?.gotFailed(response.data, error)
+                }
+            }
     }
     
 }
