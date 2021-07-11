@@ -34,43 +34,70 @@
 
 import UIKit
 
-class TopListsViewController: UIViewController {
+class TopListsViewController: ListTableViewController {
 
     var presenter: TopListsViewToPresenterProtocol?
-    
-    @IBOutlet weak var tableView: UITableView!
-    
-    private(set) var limit: Int = 1
+        
+    private(set) var limit: Int = 10
     private(set) var page: Int = 1
     
-    init() {
-        super.init(nibName: "TopListsViewController", bundle: nil)
-    }
+    let tableCell: UITableViewCell = TopListsTableViewCell()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI()
         presenter?.fetchTopLists(limit: limit, page: page)
+        
     }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+    func setupUI() {
+        self.title = "Top Lists"
+        
+        self.prepareTableView(style: .plain)
+        
+        self.tableView.register(UINib(nibName: tableCell.identifier, bundle: nil), forCellReuseIdentifier: tableCell.identifier)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
  
 }
 
 
-extension TopListsViewController:  TopListsPresenterToViewProtocol {
+extension TopListsViewController: TopListsPresenterToViewProtocol {
     
     func showLoading() {
-        let activityIndicator = UIActivityIndicatorView(style: .medium)
-        activityIndicator.startAnimating()
-        activityIndicator.color = .black
-        self.tableView.backgroundView = activityIndicator
-        
-        self.tableView.separatorStyle = .none
+        self.showActivityIndicatorView()
+    }
+    
+    func refresh() {
+        self.hideActivityIndicatorView()
+        self.tableView.reloadData()
     }
 }
 
 extension TopListsViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+
+}
+
+extension TopListsViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter?.totalItems ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: tableCell.identifier, for: indexPath) as! TopListsTableViewCell
+        
+        if let items = presenter?.listItems {
+            cell.configure(item: items[indexPath.row])
+        }
+        
+        return cell
+    }
+
 }
