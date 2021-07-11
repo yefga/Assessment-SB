@@ -41,6 +41,18 @@ class TopListsPresenter: TopListsViewToPresenterProtocol {
     var interactor: TopListsPresenterToInteractorProtocol?
     
     var router: TopListsPresenterToRouterProtocol?
+
+    private var items: [CryptoCurrency] = []
+
+    var totalItems: Int {
+        return items.count
+    }
+    
+    var listItems: [CryptoCurrency] {
+        return items
+    }
+    
+    var errorMessage: String = ""
     
     func fetchTopLists(limit: Int, page: Int) {
         view?.showLoading()
@@ -51,4 +63,19 @@ class TopListsPresenter: TopListsViewToPresenterProtocol {
 
 extension TopListsPresenter: TopListsInteractorToPresenterProtocol {
     
+    func getItems(items: [CryptoCurrency]?, message: String?) {
+        if let items = items {
+            items.forEach { item in
+                if !items.isEmpty && !self.items.contains(item) {
+                    self.items.append(item)
+                }
+            }
+            view?.refresh()
+        }
+        
+    }
+    
+    func gotFailed(_ data: Data?, _ error: Error) {
+        self.errorMessage = error.localizedDescription
+    }
 }
