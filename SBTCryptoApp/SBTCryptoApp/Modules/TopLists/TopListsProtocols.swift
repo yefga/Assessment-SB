@@ -43,6 +43,7 @@ protocol TopListsViewToPresenterProtocol: AnyObject {
 
     /// Add here your methods to communicate between VIEW -> PRESENTER
     var totalItems: Int { get }
+    var listItems: [CryptoCurrency] { get }
     func fetchTopLists(limit: Int, page: Int)
     
 }
