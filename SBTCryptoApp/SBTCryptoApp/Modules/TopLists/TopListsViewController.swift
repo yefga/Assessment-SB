@@ -76,12 +76,17 @@ extension TopListsViewController: TopListsPresenterToViewProtocol {
     }
 }
 
+
 extension TopListsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
 }
 
 extension TopListsViewController: UITableViewDataSource {
@@ -98,6 +103,14 @@ extension TopListsViewController: UITableViewDataSource {
         }
         
         return cell
+    }
+
+}
+
+extension TopListsViewController {
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
     }
 
 }
