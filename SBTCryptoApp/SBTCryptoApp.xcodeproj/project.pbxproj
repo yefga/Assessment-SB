@@ -26,6 +26,12 @@
 		8F486E26269AE68900D27DA8 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E25269AE68900D27DA8 /* UIViewController.swift */; };
 		8F486E28269AE70300D27DA8 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E27269AE70300D27DA8 /* ListTableViewController.swift */; };
 		8F486E2A269AE98300D27DA8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E29269AE98300D27DA8 /* UIView.swift */; };
+		8F486E36269AF54D00D27DA8 /* LatestNewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E31269AF54D00D27DA8 /* LatestNewsInteractor.swift */; };
+		8F486E38269AF54D00D27DA8 /* LatestNewsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E35269AF54D00D27DA8 /* LatestNewsProtocols.swift */; };
+		8F486E39269AF54D00D27DA8 /* LatestNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E30269AF54D00D27DA8 /* LatestNewsViewController.swift */; };
+		8F486E3A269AF54D00D27DA8 /* LatestNewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E32269AF54D00D27DA8 /* LatestNewsPresenter.swift */; };
+		8F486E3B269AF54D00D27DA8 /* LatestNewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E33269AF54D00D27DA8 /* LatestNewsRouter.swift */; };
+		8F486E3D269AF57800D27DA8 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E3C269AF57800D27DA8 /* News.swift */; };
 		8F90426C269588D700B2A550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90426B269588D700B2A550 /* AppDelegate.swift */; };
 		8F904275269588D900B2A550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F904274269588D900B2A550 /* Assets.xcassets */; };
 		8F904278269588D900B2A550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F904276269588D900B2A550 /* LaunchScreen.storyboard */; };
@@ -73,6 +79,12 @@
 		8F486E25269AE68900D27DA8 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		8F486E27269AE70300D27DA8 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		8F486E29269AE98300D27DA8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		8F486E30269AF54D00D27DA8 /* LatestNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsViewController.swift; sourceTree = "<group>"; };
+		8F486E31269AF54D00D27DA8 /* LatestNewsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsInteractor.swift; sourceTree = "<group>"; };
+		8F486E32269AF54D00D27DA8 /* LatestNewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsPresenter.swift; sourceTree = "<group>"; };
+		8F486E33269AF54D00D27DA8 /* LatestNewsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsRouter.swift; sourceTree = "<group>"; };
+		8F486E35269AF54D00D27DA8 /* LatestNewsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsProtocols.swift; sourceTree = "<group>"; };
+		8F486E3C269AF57800D27DA8 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		8F904268269588D700B2A550 /* SBTCryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBTCryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F90426B269588D700B2A550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F904274269588D900B2A550 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,7 +165,7 @@
 		8F3732F92698478A00090615 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				8F3732FA269847D300090615 /* CryptoCurrency.swift */,
+				8F486E3E269AF58800D27DA8 /* Models */,
 				8F3732FC2699BF6B00090615 /* MapArray.swift */,
 			);
 			path = Entities;
@@ -194,6 +206,27 @@
 				8F486E25269AE68900D27DA8 /* UIViewController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8F486E2B269AF50C00D27DA8 /* LatestNews */ = {
+			isa = PBXGroup;
+			children = (
+				8F486E31269AF54D00D27DA8 /* LatestNewsInteractor.swift */,
+				8F486E32269AF54D00D27DA8 /* LatestNewsPresenter.swift */,
+				8F486E35269AF54D00D27DA8 /* LatestNewsProtocols.swift */,
+				8F486E33269AF54D00D27DA8 /* LatestNewsRouter.swift */,
+				8F486E30269AF54D00D27DA8 /* LatestNewsViewController.swift */,
+			);
+			path = LatestNews;
+			sourceTree = "<group>";
+		};
+		8F486E3E269AF58800D27DA8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8F3732FA269847D300090615 /* CryptoCurrency.swift */,
+				8F486E3C269AF57800D27DA8 /* News.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8F90425F269588D700B2A550 = {
@@ -274,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				8F3732F82698439800090615 /* TopLists */,
+				8F486E2B269AF50C00D27DA8 /* LatestNews */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -519,11 +553,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F3732FD2699BF6B00090615 /* MapArray.swift in Sources */,
+				8F486E36269AF54D00D27DA8 /* LatestNewsInteractor.swift in Sources */,
 				8F3732F626983DE100090615 /* TopListsViewController.swift in Sources */,
 				8F486E26269AE68900D27DA8 /* UIViewController.swift in Sources */,
+				8F486E3A269AF54D00D27DA8 /* LatestNewsPresenter.swift in Sources */,
 				8F3732F226983DE100090615 /* TopListsInteractor.swift in Sources */,
 				8F3732F726983DE100090615 /* TopListsRouter.swift in Sources */,
+				8F486E3B269AF54D00D27DA8 /* LatestNewsRouter.swift in Sources */,
 				8F486E28269AE70300D27DA8 /* ListTableViewController.swift in Sources */,
+				8F486E39269AF54D00D27DA8 /* LatestNewsViewController.swift in Sources */,
 				8F90426C269588D700B2A550 /* AppDelegate.swift in Sources */,
 				8F486E23269AE59200D27DA8 /* TopListsTableViewCell.swift in Sources */,
 				8F3732FB269847D300090615 /* CryptoCurrency.swift in Sources */,
@@ -532,6 +570,8 @@
 				8F3732F326983DE100090615 /* TopListsPresenter.swift in Sources */,
 				8F9042A4269590BF00B2A550 /* Constant.swift in Sources */,
 				8F3732F426983DE100090615 /* TopListsProtocols.swift in Sources */,
+				8F486E3D269AF57800D27DA8 /* News.swift in Sources */,
+				8F486E38269AF54D00D27DA8 /* LatestNewsProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
