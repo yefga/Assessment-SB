@@ -8,37 +8,25 @@
 
 import ObjectMapper
 
-class CryptoCurrency: Mappable {
-    var id: String?
-    var guid: String?
-    var publishedOn: Int?
-    var imageurl: String?
-    var title: String?
-    var url: String?
-    var source, body, tags, categories: String?
-    var upvotes, downvotes: String?
-    var lang: Lang?
-    var sourceInfo: SourceInfo?
+public class CryptoCurrency: Mappable {
     
-    required init?(map: Map) {
+    public var coinInfo: CoinInfo?
+    public var display: Display?
+    
+    public required init?(map: Map) {
 
     }
         
-    func mapping(map: Map) {
-        id <- map["id"]
-        guid <- map["guid"]
-        publishedOn <- map ["published_on"]
-        imageurl <- map ["imageurl"]
-        title <- map ["title"]
-        url <- map ["url"]
-        source <- map ["source"]
-        body <- map ["body"]
-        tags <- map ["tags"]
-        categories <- map ["categories"]
-        upvotes <- map ["upvotes"]
-        downvotes <- map ["downvotes"]
-        lang <- map ["lang"]
-        sourceInfo <- map ["source_info"]
+    public func mapping(map: Map) {
+        coinInfo <- map["CoinInfo"]
+        display <- map["DISPLAY"]
+    }
+    
+}
+
+extension CryptoCurrency: Equatable {
+    public static func == (lhs: CryptoCurrency, rhs: CryptoCurrency) -> Bool {
+        return lhs.coinInfo?.id == rhs.coinInfo?.id
     }
 }
 
@@ -51,4 +39,46 @@ struct SourceInfo: Codable {
     let name: String
     let lang: Lang
     let img: String
+}
+
+public class CoinInfo: Mappable {
+    
+    public var id, name, fullName: String?
+    
+    required public init?(map: Map) {
+
+    }
+        
+    public func mapping(map: Map) {
+        id <- map["Id"]
+        name <- map["Name"]
+        fullName <- map["FullName"]
+    }
+}
+
+
+public class Display: Mappable {
+    
+    public var currency: String?
+    
+    required public init?(map: Map) {
+
+    }
+        
+    public func mapping(map: Map) {
+        currency <- map[currencyRequest]
+        
+    }
+}
+
+public class Currency: Mappable {
+    
+    public var price: String?
+    
+    required public init?(map: Map) {
+    }
+    
+    public func mapping(map: Map) {
+        price <- map["PRICE"]
+    }
 }
