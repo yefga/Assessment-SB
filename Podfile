@@ -12,6 +12,7 @@ target 'SBTCryptoApp' do
     pod 'Alamofire'
     pod 'AlamofireObjectMapper'
     pod 'AlamofireNetworkActivityLogger'
+    pod 'Starscream'
     
     target 'SBTCryptoAppTests' do
         inherit! :search_paths

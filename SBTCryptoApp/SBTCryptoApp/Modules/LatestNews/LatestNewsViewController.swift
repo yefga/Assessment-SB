@@ -121,6 +121,10 @@ extension LatestNewsViewController: UITableViewDelegate {
             self.presenter?.openLink(urlString: items[indexPath.row].url ?? "https://stockbit.com")
         }
     }
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+    }
 }
 
 extension LatestNewsViewController: UITableViewDataSource {

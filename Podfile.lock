@@ -6,11 +6,13 @@ PODS:
     - Alamofire (= 5.0.0-rc.2)
     - ObjectMapper (~> 3.5.1)
   - ObjectMapper (3.5.3)
+  - Starscream (4.0.4)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireNetworkActivityLogger
   - AlamofireObjectMapper
+  - Starscream
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -18,13 +20,15 @@ SPEC REPOS:
     - AlamofireNetworkActivityLogger
     - AlamofireObjectMapper
     - ObjectMapper
+    - Starscream
 
 SPEC CHECKSUMS:
   Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
   AlamofireNetworkActivityLogger: 94e8a7d454a4a9800cef1d0c1d3699754493684b
   AlamofireObjectMapper: 74d1440c92c42bbcc2b5f4dc81654ac095ec669f
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
 
-PODFILE CHECKSUM: 74ca31131deb59549ce6f4c8da6cc3c0095ab1db
+PODFILE CHECKSUM: bcaa54a26ee747a71ce2833fd1eff8408bc8fbb5
 
 COCOAPODS: 1.10.1
