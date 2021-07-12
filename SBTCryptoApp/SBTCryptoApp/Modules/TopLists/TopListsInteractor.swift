@@ -34,6 +34,7 @@
 
 import Alamofire
 import AlamofireObjectMapper
+import Starscream
 
 class TopListsInteractor: TopListsPresenterToInteractorProtocol {
     
@@ -55,6 +56,20 @@ class TopListsInteractor: TopListsPresenterToInteractorProtocol {
                     self.presenter?.gotFailed(response.data, error)
                 }
             }
+    }
+    
+    func requestLiveChangePrice(for currency: String) {
+        var request = URLRequest(url: URL(string: "wss://streamer.cryptocompare.com/v2?api_key=\(APIKey)")!)
+        let json = """
+            {
+                "action": "SubAdd",
+                "subs": ["24~CCCAGG~\(currency)~USD~m"]
+            }
+            """
+        request.timeoutInterval = 5 // Sets the timeout for the connection
+//        request.setValue("Everything is Awesome!", forHTTPHeaderField: "My-Awesome-Header")
+        let socket = WebSocket(request: request)
+        
     }
     
 }

@@ -123,7 +123,9 @@ extension LatestNewsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
+        if let items = presenter?.listItems {
+            
+        }
     }
 }
 
