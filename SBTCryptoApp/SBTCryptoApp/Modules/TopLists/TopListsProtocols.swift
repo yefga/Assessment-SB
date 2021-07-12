@@ -47,7 +47,7 @@ protocol TopListsViewToPresenterProtocol: AnyObject {
     var currentPage: Int { get }
     
     func fetchTopLists(limit: Int, page: Int, type: LoadingType)
-    
+    func goToLatestNews(_ InitialOfCurrency: String)
 }
 
 //MARK: View
@@ -90,5 +90,5 @@ protocol TopListsPresenterToRouterProtocol: AnyObject {
     /// Add here your methods to communicate between PRESENTER -> ROUTER (WIREFRAME)
     
     func createModule()-> TopListsViewController
-    func goToLatestNews(viewController: TopListsViewController)
+    func goToLatestNews(_ InitialOfCurrency: String)
 }

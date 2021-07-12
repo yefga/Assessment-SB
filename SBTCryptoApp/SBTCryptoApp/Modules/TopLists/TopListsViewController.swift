@@ -126,7 +126,10 @@ extension TopListsViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currency = self.presenter?.listItems[indexPath.row]
         
+        guard let initialOfCurrency = currency?.coinInfo?.name?.uppercased() else { return }
+        self.presenter?.goToLatestNews(initialOfCurrency)
     }
     
 }

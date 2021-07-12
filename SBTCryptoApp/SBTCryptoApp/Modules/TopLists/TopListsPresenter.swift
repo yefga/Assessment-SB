@@ -69,6 +69,10 @@ class TopListsPresenter: TopListsViewToPresenterProtocol {
         
     }
     
+    func goToLatestNews(_ InitialOfCurrency: String) {
+        self.router?.goToLatestNews(InitialOfCurrency)
+    }
+    
 }
 
 extension TopListsPresenter: TopListsInteractorToPresenterProtocol {

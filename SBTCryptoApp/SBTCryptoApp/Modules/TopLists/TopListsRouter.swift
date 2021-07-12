@@ -40,6 +40,8 @@ class TopListsRouter: TopListsPresenterToRouterProtocol {
 
     static let shared = TopListsRouter()
     
+    var viewController: UIViewController?
+    
     func createModule() -> TopListsViewController {
         
         let view = TopListsViewController()
@@ -53,10 +55,15 @@ class TopListsRouter: TopListsPresenterToRouterProtocol {
         presenter.interactor = interactor
         interactor.presenter = presenter
         
+        self.viewController = view
+        
         return view
     }
     
-    func goToLatestNews(viewController: TopListsViewController) {
-        
+    func goToLatestNews(_ InitialOfCurrency: String) {
+        let vc = LatestNewsRouter.shared.createModule()
+//        vc.presenter. = InitialOfCurrency
+        viewController?.present(vc, animated: true, completion: nil)
     }
+    
 }
