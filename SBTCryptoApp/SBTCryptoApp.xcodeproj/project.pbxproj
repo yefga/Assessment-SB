@@ -8,11 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		29C359F435E5BA9C71A8AB0B /* Pods_SBTCryptoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA201FFB5C5AFA2A9FD2B8D /* Pods_SBTCryptoApp.framework */; };
+		6B83A32878531915A5B567BE /* Pods_SBTCryptoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6913CF768874BEDE1922C8 /* Pods_SBTCryptoAppTests.framework */; };
+		8F224DD8269C22F8002ACB72 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F224DD7269C22F8002ACB72 /* Toast.swift */; };
+		8F224DDB269C2860002ACB72 /* LatestNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F224DDA269C2860002ACB72 /* LatestNewsTableViewCell.xib */; };
+		8F224DDD269C286E002ACB72 /* LatestNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F224DDC269C286E002ACB72 /* LatestNewsTableViewCell.swift */; };
+		8F224DE0269C3393002ACB72 /* LatestNewsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F224DDF269C3393002ACB72 /* LatestNewsInteractorTests.swift */; };
+		8F224DE7269C6C58002ACB72 /* LatestNewsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F224DE6269C6C58002ACB72 /* LatestNewsPresenterTests.swift */; };
+		8F3732F226983DE100090615 /* TopListsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3732ED26983DE100090615 /* TopListsInteractor.swift */; };
+		8F3732F326983DE100090615 /* TopListsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3732F126983DE100090615 /* TopListsPresenter.swift */; };
+		8F3732F426983DE100090615 /* TopListsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3732EF26983DE100090615 /* TopListsProtocols.swift */; };
+		8F3732F626983DE100090615 /* TopListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3732F026983DE100090615 /* TopListsViewController.swift */; };
+		8F3732F726983DE100090615 /* TopListsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3732EC26983DE100090615 /* TopListsRouter.swift */; };
+		8F3732FB269847D300090615 /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3732FA269847D300090615 /* CryptoCurrency.swift */; };
+		8F3732FD2699BF6B00090615 /* MapArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3732FC2699BF6B00090615 /* MapArray.swift */; };
+		8F3733022699CCF600090615 /* MapArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3733012699CCF600090615 /* MapArrayTests.swift */; };
+		8F3733042699EFA700090615 /* TopLists.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F3733032699EFA700090615 /* TopLists.json */; };
+		8F3733062699F34900090615 /* TopListsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3733052699F34900090615 /* TopListsInteractorTests.swift */; };
+		8F3733082699F3E800090615 /* TopListsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3733072699F3E800090615 /* TopListsPresenterTests.swift */; };
+		8F37330A2699F3F500090615 /* TopListsRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3733092699F3F500090615 /* TopListsRouterTests.swift */; };
+		8F486E21269AE57800D27DA8 /* TopListsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F486E20269AE57800D27DA8 /* TopListsTableViewCell.xib */; };
+		8F486E23269AE59200D27DA8 /* TopListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E22269AE59200D27DA8 /* TopListsTableViewCell.swift */; };
+		8F486E26269AE68900D27DA8 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E25269AE68900D27DA8 /* UIViewController.swift */; };
+		8F486E28269AE70300D27DA8 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E27269AE70300D27DA8 /* ListTableViewController.swift */; };
+		8F486E2A269AE98300D27DA8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E29269AE98300D27DA8 /* UIView.swift */; };
+		8F486E36269AF54D00D27DA8 /* LatestNewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E31269AF54D00D27DA8 /* LatestNewsInteractor.swift */; };
+		8F486E38269AF54D00D27DA8 /* LatestNewsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E35269AF54D00D27DA8 /* LatestNewsProtocols.swift */; };
+		8F486E39269AF54D00D27DA8 /* LatestNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E30269AF54D00D27DA8 /* LatestNewsViewController.swift */; };
+		8F486E3A269AF54D00D27DA8 /* LatestNewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E32269AF54D00D27DA8 /* LatestNewsPresenter.swift */; };
+		8F486E3B269AF54D00D27DA8 /* LatestNewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E33269AF54D00D27DA8 /* LatestNewsRouter.swift */; };
+		8F486E3D269AF57800D27DA8 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F486E3C269AF57800D27DA8 /* News.swift */; };
 		8F90426C269588D700B2A550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90426B269588D700B2A550 /* AppDelegate.swift */; };
 		8F904275269588D900B2A550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F904274269588D900B2A550 /* Assets.xcassets */; };
 		8F904278269588D900B2A550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F904276269588D900B2A550 /* LaunchScreen.storyboard */; };
-		8F904283269588DA00B2A550 /* SBTCryptoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F904282269588DA00B2A550 /* SBTCryptoAppTests.swift */; };
 		8F90428E269588DA00B2A550 /* SBTCryptoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90428D269588DA00B2A550 /* SBTCryptoAppUITests.swift */; };
+		8F9042A22695908000B2A550 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9042A12695908000B2A550 /* NetworkRouter.swift */; };
+		8F9042A4269590BF00B2A550 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9042A3269590BF00B2A550 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,18 +63,50 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		171B683A3EB23E3516C79E6E /* Pods-SBTCryptoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBTCryptoAppTests.release.xcconfig"; path = "Target Support Files/Pods-SBTCryptoAppTests/Pods-SBTCryptoAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		6A6913CF768874BEDE1922C8 /* Pods_SBTCryptoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SBTCryptoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF73F57C2BAB70FC55B8873 /* Pods-SBTCryptoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBTCryptoApp.debug.xcconfig"; path = "Target Support Files/Pods-SBTCryptoApp/Pods-SBTCryptoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		77617F58D4F9FCE51DFCA099 /* Pods-SBTCryptoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBTCryptoAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SBTCryptoAppTests/Pods-SBTCryptoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8F224DD7269C22F8002ACB72 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		8F224DDA269C2860002ACB72 /* LatestNewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LatestNewsTableViewCell.xib; sourceTree = "<group>"; };
+		8F224DDC269C286E002ACB72 /* LatestNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsTableViewCell.swift; sourceTree = "<group>"; };
+		8F224DDF269C3393002ACB72 /* LatestNewsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsInteractorTests.swift; sourceTree = "<group>"; };
+		8F224DE6269C6C58002ACB72 /* LatestNewsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsPresenterTests.swift; sourceTree = "<group>"; };
+		8F3732EC26983DE100090615 /* TopListsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsRouter.swift; sourceTree = "<group>"; };
+		8F3732ED26983DE100090615 /* TopListsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsInteractor.swift; sourceTree = "<group>"; };
+		8F3732EF26983DE100090615 /* TopListsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsProtocols.swift; sourceTree = "<group>"; };
+		8F3732F026983DE100090615 /* TopListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsViewController.swift; sourceTree = "<group>"; };
+		8F3732F126983DE100090615 /* TopListsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsPresenter.swift; sourceTree = "<group>"; };
+		8F3732FA269847D300090615 /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
+		8F3732FC2699BF6B00090615 /* MapArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapArray.swift; sourceTree = "<group>"; };
+		8F3733012699CCF600090615 /* MapArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapArrayTests.swift; sourceTree = "<group>"; };
+		8F3733032699EFA700090615 /* TopLists.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TopLists.json; sourceTree = "<group>"; };
+		8F3733052699F34900090615 /* TopListsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsInteractorTests.swift; sourceTree = "<group>"; };
+		8F3733072699F3E800090615 /* TopListsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsPresenterTests.swift; sourceTree = "<group>"; };
+		8F3733092699F3F500090615 /* TopListsRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsRouterTests.swift; sourceTree = "<group>"; };
+		8F486E20269AE57800D27DA8 /* TopListsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopListsTableViewCell.xib; sourceTree = "<group>"; };
+		8F486E22269AE59200D27DA8 /* TopListsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsTableViewCell.swift; sourceTree = "<group>"; };
+		8F486E25269AE68900D27DA8 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		8F486E27269AE70300D27DA8 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		8F486E29269AE98300D27DA8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		8F486E30269AF54D00D27DA8 /* LatestNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsViewController.swift; sourceTree = "<group>"; };
+		8F486E31269AF54D00D27DA8 /* LatestNewsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsInteractor.swift; sourceTree = "<group>"; };
+		8F486E32269AF54D00D27DA8 /* LatestNewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsPresenter.swift; sourceTree = "<group>"; };
+		8F486E33269AF54D00D27DA8 /* LatestNewsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsRouter.swift; sourceTree = "<group>"; };
+		8F486E35269AF54D00D27DA8 /* LatestNewsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsProtocols.swift; sourceTree = "<group>"; };
+		8F486E3C269AF57800D27DA8 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		8F904268269588D700B2A550 /* SBTCryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBTCryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F90426B269588D700B2A550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F904274269588D900B2A550 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F904277269588D900B2A550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F904279269588D900B2A550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F90427E269588DA00B2A550 /* SBTCryptoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBTCryptoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F904282269588DA00B2A550 /* SBTCryptoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTCryptoAppTests.swift; sourceTree = "<group>"; };
 		8F904284269588DA00B2A550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F904289269588DA00B2A550 /* SBTCryptoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBTCryptoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F90428D269588DA00B2A550 /* SBTCryptoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTCryptoAppUITests.swift; sourceTree = "<group>"; };
 		8F90428F269588DA00B2A550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F9042A12695908000B2A550 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		8F9042A3269590BF00B2A550 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D7A08B0386ABE74222CE0EEC /* Pods-SBTCryptoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBTCryptoApp.release.xcconfig"; path = "Target Support Files/Pods-SBTCryptoApp/Pods-SBTCryptoApp.release.xcconfig"; sourceTree = "<group>"; };
 		DCA201FFB5C5AFA2A9FD2B8D /* Pods_SBTCryptoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SBTCryptoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -62,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B83A32878531915A5B567BE /* Pods_SBTCryptoAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +143,8 @@
 			children = (
 				6FF73F57C2BAB70FC55B8873 /* Pods-SBTCryptoApp.debug.xcconfig */,
 				D7A08B0386ABE74222CE0EEC /* Pods-SBTCryptoApp.release.xcconfig */,
+				77617F58D4F9FCE51DFCA099 /* Pods-SBTCryptoAppTests.debug.xcconfig */,
+				171B683A3EB23E3516C79E6E /* Pods-SBTCryptoAppTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
@@ -89,8 +154,116 @@
 			isa = PBXGroup;
 			children = (
 				DCA201FFB5C5AFA2A9FD2B8D /* Pods_SBTCryptoApp.framework */,
+				6A6913CF768874BEDE1922C8 /* Pods_SBTCryptoAppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F224DD6269C22CC002ACB72 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8F224DD7269C22F8002ACB72 /* Toast.swift */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		8F224DD9269C283A002ACB72 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				8F224DDA269C2860002ACB72 /* LatestNewsTableViewCell.xib */,
+				8F224DDC269C286E002ACB72 /* LatestNewsTableViewCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		8F224DDE269C337F002ACB72 /* LatestNewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F224DDF269C3393002ACB72 /* LatestNewsInteractorTests.swift */,
+				8F224DE6269C6C58002ACB72 /* LatestNewsPresenterTests.swift */,
+			);
+			path = LatestNewsTests;
+			sourceTree = "<group>";
+		};
+		8F3732F82698439800090615 /* TopLists */ = {
+			isa = PBXGroup;
+			children = (
+				8F486E1F269AE55300D27DA8 /* cells */,
+				8F3732F026983DE100090615 /* TopListsViewController.swift */,
+				8F3732ED26983DE100090615 /* TopListsInteractor.swift */,
+				8F3732F126983DE100090615 /* TopListsPresenter.swift */,
+				8F3732EF26983DE100090615 /* TopListsProtocols.swift */,
+				8F3732EC26983DE100090615 /* TopListsRouter.swift */,
+			);
+			path = TopLists;
+			sourceTree = "<group>";
+		};
+		8F3732F92698478A00090615 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8F486E3E269AF58800D27DA8 /* Models */,
+				8F3732FC2699BF6B00090615 /* MapArray.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		8F3733002699CCD500090615 /* EntityTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F3733012699CCF600090615 /* MapArrayTests.swift */,
+				8F3733032699EFA700090615 /* TopLists.json */,
+			);
+			path = EntityTests;
+			sourceTree = "<group>";
+		};
+		8F37330B2699F3FF00090615 /* TopListsTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F3733092699F3F500090615 /* TopListsRouterTests.swift */,
+				8F3733072699F3E800090615 /* TopListsPresenterTests.swift */,
+				8F3733052699F34900090615 /* TopListsInteractorTests.swift */,
+			);
+			path = TopListsTests;
+			sourceTree = "<group>";
+		};
+		8F486E1F269AE55300D27DA8 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				8F486E20269AE57800D27DA8 /* TopListsTableViewCell.xib */,
+				8F486E22269AE59200D27DA8 /* TopListsTableViewCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		8F486E24269AE67B00D27DA8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8F486E29269AE98300D27DA8 /* UIView.swift */,
+				8F486E25269AE68900D27DA8 /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8F486E2B269AF50C00D27DA8 /* LatestNews */ = {
+			isa = PBXGroup;
+			children = (
+				8F224DD9269C283A002ACB72 /* cells */,
+				8F486E31269AF54D00D27DA8 /* LatestNewsInteractor.swift */,
+				8F486E32269AF54D00D27DA8 /* LatestNewsPresenter.swift */,
+				8F486E35269AF54D00D27DA8 /* LatestNewsProtocols.swift */,
+				8F486E33269AF54D00D27DA8 /* LatestNewsRouter.swift */,
+				8F486E30269AF54D00D27DA8 /* LatestNewsViewController.swift */,
+			);
+			path = LatestNews;
+			sourceTree = "<group>";
+		};
+		8F486E3E269AF58800D27DA8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8F3732FA269847D300090615 /* CryptoCurrency.swift */,
+				8F486E3C269AF57800D27DA8 /* News.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8F90425F269588D700B2A550 = {
@@ -118,6 +291,9 @@
 		8F90426A269588D700B2A550 /* SBTCryptoApp */ = {
 			isa = PBXGroup;
 			children = (
+				8F224DD6269C22CC002ACB72 /* Libraries */,
+				8F3732F92698478A00090615 /* Entities */,
+				8F486E24269AE67B00D27DA8 /* Extensions */,
 				8F9042A026958FC800B2A550 /* Layouts */,
 				8F90429F26958FBC00B2A550 /* Configs */,
 				8F90429E26958FB700B2A550 /* Network */,
@@ -131,7 +307,9 @@
 		8F904281269588DA00B2A550 /* SBTCryptoAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				8F904282269588DA00B2A550 /* SBTCryptoAppTests.swift */,
+				8F224DDE269C337F002ACB72 /* LatestNewsTests */,
+				8F37330B2699F3FF00090615 /* TopListsTests */,
+				8F3733002699CCD500090615 /* EntityTests */,
 				8F904284269588DA00B2A550 /* Info.plist */,
 			);
 			path = SBTCryptoAppTests;
@@ -167,6 +345,8 @@
 		8F90429D26958FB200B2A550 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8F3732F82698439800090615 /* TopLists */,
+				8F486E2B269AF50C00D27DA8 /* LatestNews */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -174,6 +354,7 @@
 		8F90429E26958FB700B2A550 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				8F9042A12695908000B2A550 /* NetworkRouter.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -181,6 +362,7 @@
 		8F90429F26958FBC00B2A550 /* Configs */ = {
 			isa = PBXGroup;
 			children = (
+				8F9042A3269590BF00B2A550 /* Constant.swift */,
 			);
 			path = Configs;
 			sourceTree = "<group>";
@@ -188,6 +370,7 @@
 		8F9042A026958FC800B2A550 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				8F486E27269AE70300D27DA8 /* ListTableViewController.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -218,9 +401,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F904295269588DA00B2A550 /* Build configuration list for PBXNativeTarget "SBTCryptoAppTests" */;
 			buildPhases = (
+				00A9B26A7DDF79A3036B62E8 /* [CP] Check Pods Manifest.lock */,
 				8F90427A269588D900B2A550 /* Sources */,
 				8F90427B269588D900B2A550 /* Frameworks */,
 				8F90427C269588D900B2A550 /* Resources */,
+				A7B58BF6D46DDF297D5E888F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -298,7 +483,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F904278269588D900B2A550 /* LaunchScreen.storyboard in Resources */,
+				8F224DDB269C2860002ACB72 /* LatestNewsTableViewCell.xib in Resources */,
 				8F904275269588D900B2A550 /* Assets.xcassets in Resources */,
+				8F486E21269AE57800D27DA8 /* TopListsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +493,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F3733042699EFA700090615 /* TopLists.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +507,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		00A9B26A7DDF79A3036B62E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SBTCryptoAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		768C0434DAAA5A72280A7D93 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -358,6 +568,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SBTCryptoApp/Pods-SBTCryptoApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A7B58BF6D46DDF297D5E888F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SBTCryptoAppTests/Pods-SBTCryptoAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SBTCryptoAppTests/Pods-SBTCryptoAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SBTCryptoAppTests/Pods-SBTCryptoAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -365,7 +592,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F3732FD2699BF6B00090615 /* MapArray.swift in Sources */,
+				8F224DDD269C286E002ACB72 /* LatestNewsTableViewCell.swift in Sources */,
+				8F486E36269AF54D00D27DA8 /* LatestNewsInteractor.swift in Sources */,
+				8F3732F626983DE100090615 /* TopListsViewController.swift in Sources */,
+				8F486E26269AE68900D27DA8 /* UIViewController.swift in Sources */,
+				8F486E3A269AF54D00D27DA8 /* LatestNewsPresenter.swift in Sources */,
+				8F3732F226983DE100090615 /* TopListsInteractor.swift in Sources */,
+				8F3732F726983DE100090615 /* TopListsRouter.swift in Sources */,
+				8F486E3B269AF54D00D27DA8 /* LatestNewsRouter.swift in Sources */,
+				8F486E28269AE70300D27DA8 /* ListTableViewController.swift in Sources */,
+				8F486E39269AF54D00D27DA8 /* LatestNewsViewController.swift in Sources */,
 				8F90426C269588D700B2A550 /* AppDelegate.swift in Sources */,
+				8F224DD8269C22F8002ACB72 /* Toast.swift in Sources */,
+				8F486E23269AE59200D27DA8 /* TopListsTableViewCell.swift in Sources */,
+				8F3732FB269847D300090615 /* CryptoCurrency.swift in Sources */,
+				8F9042A22695908000B2A550 /* NetworkRouter.swift in Sources */,
+				8F486E2A269AE98300D27DA8 /* UIView.swift in Sources */,
+				8F3732F326983DE100090615 /* TopListsPresenter.swift in Sources */,
+				8F9042A4269590BF00B2A550 /* Constant.swift in Sources */,
+				8F3732F426983DE100090615 /* TopListsProtocols.swift in Sources */,
+				8F486E3D269AF57800D27DA8 /* News.swift in Sources */,
+				8F486E38269AF54D00D27DA8 /* LatestNewsProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +621,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F904283269588DA00B2A550 /* SBTCryptoAppTests.swift in Sources */,
+				8F224DE7269C6C58002ACB72 /* LatestNewsPresenterTests.swift in Sources */,
+				8F3733062699F34900090615 /* TopListsInteractorTests.swift in Sources */,
+				8F3733022699CCF600090615 /* MapArrayTests.swift in Sources */,
+				8F37330A2699F3F500090615 /* TopListsRouterTests.swift in Sources */,
+				8F224DE0269C3393002ACB72 /* LatestNewsInteractorTests.swift in Sources */,
+				8F3733082699F3E800090615 /* TopListsPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +716,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -518,7 +771,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -570,6 +823,7 @@
 		};
 		8F904296269588DA00B2A550 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77617F58D4F9FCE51DFCA099 /* Pods-SBTCryptoAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -592,6 +846,7 @@
 		};
 		8F904297269588DA00B2A550 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 171B683A3EB23E3516C79E6E /* Pods-SBTCryptoAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
