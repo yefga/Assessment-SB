@@ -44,16 +44,26 @@ protocol TopListsViewToPresenterProtocol: AnyObject {
     /// Add here your methods to communicate between VIEW -> PRESENTER
     var totalItems: Int { get }
     var listItems: [CryptoCurrency] { get }
-    func fetchTopLists(limit: Int, page: Int)
+    var currentPage: Int { get }
+    
+    func fetchTopLists(limit: Int, page: Int, type: LoadingType)
     
 }
 
 //MARK: View
+enum LoadingType {
+    case refresh
+    case initial
+    case more
+}
+
 protocol TopListsPresenterToViewProtocol: AnyObject {
     
     /// Add here your methods to communicate between PRESENTER -> VIEW
-    func showLoading()
-    func refresh()
+    func showLoading(_ type: LoadingType)
+    func hideLoading(_ type: LoadingType)
+    func gotAnError(_ message: String)
+    
 }
 
 //MARK: Interactor - Input
@@ -62,7 +72,7 @@ protocol TopListsPresenterToInteractorProtocol: AnyObject {
     /// Add here your methods to communicate between PRESENTER -> INTERACTOR
     
     var presenter: TopListsInteractorToPresenterProtocol?  { get set }
-    func fetchTopLists(limit: Int, page: Int)
+    func fetchTopLists(limit: Int, page: Int, type: LoadingType)
    
 }
 
@@ -70,7 +80,7 @@ protocol TopListsPresenterToInteractorProtocol: AnyObject {
 protocol TopListsInteractorToPresenterProtocol: AnyObject {
 
     /// Add here your methods to communicate between INTERACTOR -> PRESENTER
-    func getItems(items: [CryptoCurrency]?, message: String?)
+    func getItems(items: [CryptoCurrency]?, message: String?, type: LoadingType)
     func gotFailed(_ data: Data?, _ error: Error)
 }
 

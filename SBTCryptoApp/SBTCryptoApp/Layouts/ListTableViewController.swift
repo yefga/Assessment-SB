@@ -24,7 +24,6 @@ class ListTableViewController: UIViewController {
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.keyboardDismissMode = .interactive
-        tableView.tableFooterView = UIView(frame: .zero)
         
         view.addSubview(tableView)
     }

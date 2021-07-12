@@ -59,7 +59,7 @@ public class CoinInfo: Mappable {
 
 public class Display: Mappable {
     
-    public var currency: String?
+    public var currency: Currency?
     
     required public init?(map: Map) {
 

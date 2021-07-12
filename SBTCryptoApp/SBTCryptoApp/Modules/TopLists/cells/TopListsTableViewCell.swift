@@ -22,7 +22,7 @@ class TopListsTableViewCell: UITableViewCell {
         
         self.initialCurrencyLabel.text = item.coinInfo?.name
         self.currencyLabel.text = item.coinInfo?.fullName
-        
+        self.priceLabel.text = item.display?.currency?.price
     }
     
     
