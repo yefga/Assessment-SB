@@ -20,6 +20,7 @@ class TopListsRouterTests: XCTestCase {
     func testTopListsRouter() {
         let vc = router.createModule()
         XCTAssertTrue(vc.topmostViewController() is TopListsViewController)
+        XCTAssertTrue(router.viewController is TopListsViewController)
     }
     
 }

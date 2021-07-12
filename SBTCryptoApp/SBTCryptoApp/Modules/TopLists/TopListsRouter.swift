@@ -62,8 +62,10 @@ class TopListsRouter: TopListsPresenterToRouterProtocol {
     
     func goToLatestNews(_ InitialOfCurrency: String) {
         let vc = LatestNewsRouter.shared.createModule()
-//        vc.presenter. = InitialOfCurrency
-        viewController?.present(vc, animated: true, completion: nil)
+        vc.presenter?.initialOfCurrency = InitialOfCurrency
+        
+        let nav = UINavigationController(rootViewController: vc)
+        viewController?.present(nav, animated: true, completion: nil)
     }
     
 }

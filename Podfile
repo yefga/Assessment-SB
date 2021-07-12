@@ -8,10 +8,11 @@ workspace "SBTCrypto"
 
 target 'SBTCryptoApp' do 
     project 'SBTCryptoApp/SBTCryptoApp.project'
+    
     pod 'Alamofire'
     pod 'AlamofireObjectMapper'
     pod 'AlamofireNetworkActivityLogger'
-
+    
     target 'SBTCryptoAppTests' do
         inherit! :search_paths
         pod 'AlamofireObjectMapper'

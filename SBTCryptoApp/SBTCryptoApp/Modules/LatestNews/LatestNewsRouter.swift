@@ -58,7 +58,9 @@ class LatestNewsRouter: LatestNewsPresenterToRouterProtocol {
         return view
     }
     
-    func goTo(viewController: LatestNewsViewController) {
-        
+    func openLink(urlString: String) {
+        guard let url = URL(string: urlString) else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
+    
 }

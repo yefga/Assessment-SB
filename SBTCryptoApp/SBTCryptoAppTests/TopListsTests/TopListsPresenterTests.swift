@@ -27,7 +27,6 @@ class TopListsPresenterTests: XCTestCase {
         let items: [CryptoCurrency] = []
         self.sut.getItems(items: items, message: "", type: .initial)
         XCTAssertEqual(sut.totalItems, 0)
-        XCTAssertEqual(sut.errorMessage, "")
     }
     
     func testSuccessWithMockedItemsNotEmpty() {
@@ -42,7 +41,6 @@ class TopListsPresenterTests: XCTestCase {
         let response = MapArray<CryptoCurrency>(JSONString: JSONString)
         
         self.sut.getItems(items: response?.data, message: "Success", type: .initial)
-        XCTAssertTrue(self.sut.errorMessage.isEmpty)
         XCTAssertGreaterThan(sut.totalItems, 1)
     }
     
@@ -52,7 +50,6 @@ class TopListsPresenterTests: XCTestCase {
         input.fetchTopLists(limit: 10, page: 1, type: .initial)
         wait(for: [initial], timeout: 30.0)
         XCTAssertEqual(sut.totalItems, 10)
-        XCTAssertTrue(sut.errorMessage.isEmpty)
     }
     
     func testSuccessLoadMoreFetch() {
@@ -90,7 +87,6 @@ class TopListsPresenterTests: XCTestCase {
         
         XCTAssertNotEqual(sut.totalItems, 10)
         XCTAssertEqual(sut.totalItems, 0)
-        XCTAssertNotEqual(sut.errorMessage.lowercased(), "success")
         
     }
     

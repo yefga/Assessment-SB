@@ -26,3 +26,9 @@ public class News: Mappable {
     }
     
 }
+
+extension News: Equatable {
+    public static func == (lhs: News, rhs: News) -> Bool {
+        return lhs.id == rhs.id
+    }
+}

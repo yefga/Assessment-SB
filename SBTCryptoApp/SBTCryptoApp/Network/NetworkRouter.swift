@@ -23,7 +23,7 @@ public enum NetworkRouter: URLRequestConvertible {
         case .topList:
             return "top/totaltoptiervolfull"
         case .latestNews:
-            return "v2/news/?lang=EN"
+            return "v2/news/"
         }
     }
     
@@ -39,7 +39,7 @@ public enum NetworkRouter: URLRequestConvertible {
             case .topList(let limit, let page):
                 urlRequest = try URLEncoding.default.encode(urlRequest, with: ["limit":limit, "page": page, "tsym": currencyRequest])
             case .latestNews(let categories):
-                urlRequest = try URLEncoding.default.encode(urlRequest, with: ["categories":categories])
+                urlRequest = try URLEncoding.default.encode(urlRequest, with: ["categories":categories, "lang": languageRequest])
         }
      
         return urlRequest

@@ -36,33 +36,115 @@
 
 import UIKit
 
-class LatestNewsViewController: UIViewController {
+class LatestNewsViewController: ListTableViewController {
 
     var presenter: LatestNewsViewToPresenterProtocol?
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder _: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    let tableCell: UITableViewCell = LatestNewsTableViewCell()
+    let refreshControl = UIRefreshControl()
+    let footerActivityIndicatorView = UIActivityIndicatorView(style: .medium)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        presenter?.fetchNews()
     }
     
     func setupUI() {
+        self.title = "News"
         
+        self.prepareTableView(style: .plain)
+        self.tableView.register(UINib(nibName: tableCell.identifier,
+                                      bundle: nil), forCellReuseIdentifier: tableCell.identifier)
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        self.tableView.refreshControl = refreshControl
+        
+        
+        let footerView = UIView(frame: CGRect(x: 0,
+                                              y: 0,
+                                              width: self.tableView.frame.width,
+                                              height: 80))
+        self.tableView.tableFooterView = footerView
+        
+        footerView.addSubview(footerActivityIndicatorView)
+        self.footerActivityIndicatorView.center = footerView.center
+        self.footerActivityIndicatorView.hidesWhenStopped = true
+        self.footerActivityIndicatorView.color = .black
     }
    
+    @objc private func refresh() {
+        self.presenter?.refreshNews()
+    }
 }
 
 
-extension LatestNewsViewController:  LatestNewsPresenterToViewProtocol {
- 
-    func noticeShowLoading() {
+extension LatestNewsViewController: LatestNewsPresenterToViewProtocol {
+    
+    func showLoading(_ type: LoadingType) {
+        switch type {
+        case .initial:
+            self.showActivityIndicatorView()
+        case .more:
+            self.footerActivityIndicatorView.startAnimating()
+        case .refresh:
+            refreshControl.beginRefreshing()
+        }
+    }
+    
+    func hideLoading(_ type: LoadingType) {
+        switch type {
+        case .initial:
+            self.hideActivityIndicatorView()
+        case .more:
+            self.footerActivityIndicatorView.stopAnimating()
+        case .refresh:
+            refreshControl.endRefreshing()
+        }
+        self.tableView.reloadData()
+    }
+    
+    func gotAnError(_ message: String) {
+        self.view.makeToast(message)
+    }
+}
+
+extension LatestNewsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let items = presenter?.listItems {
+            self.presenter?.openLink(urlString: items[indexPath.row].url ?? "https://stockbit.com")
+        }
+    }
+}
+
+extension LatestNewsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter?.totalItems ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: tableCell.identifier, for: indexPath) as! LatestNewsTableViewCell
         
+        if let items = presenter?.listItems {
+            cell.configure(item: items[indexPath.row])
+        }
+        
+        return cell
+    }
+}
+
+extension LatestNewsViewController {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let offset = (scrollView.contentOffset.y - (scrollView.contentSize.height - scrollView.frame.size.height))
+        
+        if offset > 0 {
+            self.presenter?.loadMore()
+        }
     }
 }

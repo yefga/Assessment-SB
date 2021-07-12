@@ -43,7 +43,14 @@ protocol LatestNewsViewToPresenterProtocol: AnyObject {
     var interactor: LatestNewsPresenterToInteractorProtocol? {get set}
     var router: LatestNewsPresenterToRouterProtocol? {get set}
 
+    var initialOfCurrency: String { get set }
+    var listItems: [News] { get set}
+    var totalItems: Int { get }
     /// Add here your methods to communicate between VIEW -> PRESENTER
+    func fetchNews()
+    func refreshNews()
+    func loadMore()
+    func openLink(urlString: String)
     
 }
 
@@ -51,7 +58,9 @@ protocol LatestNewsViewToPresenterProtocol: AnyObject {
 protocol LatestNewsPresenterToViewProtocol: AnyObject {
     
     /// Add here your methods to communicate between PRESENTER -> VIEW
-     
+    func showLoading(_ type: LoadingType)
+    func hideLoading(_ type: LoadingType)
+    func gotAnError(_ message: String)
 }
 
 //MARK: Interactor - Input
@@ -60,23 +69,22 @@ protocol LatestNewsPresenterToInteractorProtocol: AnyObject {
     /// Add here your methods to communicate between PRESENTER -> INTERACTOR
     
     var presenter: LatestNewsInteractorToPresenterProtocol?  { get set }
-    func fetchLatestNews(result: String)
-   
+    func fetchNews(by InitialOfCurrency: String, type: LoadingType)
+
 }
 
 //MARK: Interactor - Output
 protocol LatestNewsInteractorToPresenterProtocol: AnyObject {
 
     /// Add here your methods to communicate between INTERACTOR -> PRESENTER    
-    func noticeShowLoading()
-  
+    func getItems(items: [News]?, type: LoadingType)
+    func gotFailed(_ data: Data?, error: Error)
 }
 
 //MARK: Router
 protocol LatestNewsPresenterToRouterProtocol: AnyObject {
     
     /// Add here your methods to communicate between PRESENTER -> ROUTER (WIREFRAME)
-    
     func createModule()-> LatestNewsViewController
-    func goTo(viewController: LatestNewsViewController)
+    func openLink(urlString: String)
 }

@@ -34,14 +34,25 @@
 ///  Running on macOS 11.4
 ///
 
-import Foundation
+import Alamofire
+import AlamofireObjectMapper
 
 class LatestNewsInteractor: LatestNewsPresenterToInteractorProtocol {
     
     weak var presenter: LatestNewsInteractorToPresenterProtocol?
     
-    func fetchLatestNews(result: String) {
-        
+    func fetchNews(by InitialOfCurrency: String, type: LoadingType) {
+        Alamofire.Session.default.request(NetworkRouter.latestNews(categories: InitialOfCurrency)).validate().responseObject { (response: AFDataResponse<MapArray<News>>) in
+            switch response.result {
+                case .success(let result):
+                    if let items = result.data {
+                        self.presenter?.getItems(items: items, type: type)
+                    }
+                    
+                case .failure(let error):
+                    self.presenter?.gotFailed(response.data, error: error)
+            }
+        }
     }
     
 }

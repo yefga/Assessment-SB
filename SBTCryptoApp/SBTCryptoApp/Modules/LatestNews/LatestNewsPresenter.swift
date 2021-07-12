@@ -44,16 +44,84 @@ class LatestNewsPresenter: LatestNewsViewToPresenterProtocol {
     
     var router: LatestNewsPresenterToRouterProtocol?
     
-//     deinit {
-//         self.interactor = nil
-//     }
+    private var storedItems: [News] = []
+
+    var initialOfCurrency: String = ""
     
+    var listItems: [News] = []
+    
+    var totalItems: Int {
+        return listItems.count
+    }
+    
+    func fetchNews() {
+        view?.showLoading(.initial)
+        interactor?.fetchNews(by: initialOfCurrency, type: .initial)
+    }
+    
+    func refreshNews() {
+        self.storedItems.removeAll()
+        self.listItems.removeAll()
+        
+        view?.showLoading(.refresh)
+        interactor?.fetchNews(by: initialOfCurrency, type: .refresh)
+    }
+    
+    func loadMore() {
+        view?.showLoading(.more)
+
+        var itemRequested: Int = 10
+        
+        if listItems.count + 10 < storedItems.count {
+            itemRequested = 10
+        } else {
+            itemRequested = storedItems.count - (listItems.count + 1)
+        }
+        
+        if listItems.count < storedItems.count {
+            let loadedItems = Array(storedItems[listItems.count...listItems.count + itemRequested])
+            loadedItems.forEach { item in
+                if !listItems.contains(item) {
+                    self.listItems.append(item)
+                }
+            }
+        }
+        
+        view?.hideLoading(.more)
+
+    }
+    
+    
+    func openLink(urlString: String) {
+        router?.openLink(urlString: urlString)
+    }
 }
 
 extension LatestNewsPresenter: LatestNewsInteractorToPresenterProtocol {
   
-    func noticeShowLoading() {
-        
+    func getItems(items: [News]?, type: LoadingType) {
+        if let items = items {
+            items.forEach { news in
+                if !self.storedItems.contains(news) {
+                    self.storedItems.append(news)
+                }
+            }
+            
+            self.storedItems = self.storedItems.sorted(by: { news1, news2 in
+                news1.id! < news1.id!
+            })
+            
+            self.listItems = Array(storedItems.prefix(10))
+            
+            view?.hideLoading(type)
+        }
     }
     
+    func gotFailed(_ data: Data?, error: Error) {
+        if let data = data {
+            view?.gotAnError(data.description)
+        } else {
+            view?.gotAnError(error.localizedDescription)
+        }
+    }
 }

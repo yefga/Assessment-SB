@@ -19,4 +19,10 @@ class LatestNewsTableViewCell: UITableViewCell {
     }
     
     
+    func configure(item: News) {
+        self.publisherLabel.text = item.categories
+        self.titleLabel.text = item.title
+        self.descriptionTextView.text = item.body
+    }
+    
 }

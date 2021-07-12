@@ -32,7 +32,7 @@
 ///  Created by Yefga on 09/07/21.
 
 
-import Foundation
+import UIKit
 
 //MARK: Presenter
 protocol TopListsViewToPresenterProtocol: AnyObject {
@@ -88,7 +88,7 @@ protocol TopListsInteractorToPresenterProtocol: AnyObject {
 protocol TopListsPresenterToRouterProtocol: AnyObject {
     
     /// Add here your methods to communicate between PRESENTER -> ROUTER (WIREFRAME)
-    
-    func createModule()-> TopListsViewController
+    var viewController: UIViewController? { get set }
+    func createModule() -> TopListsViewController
     func goToLatestNews(_ InitialOfCurrency: String)
 }

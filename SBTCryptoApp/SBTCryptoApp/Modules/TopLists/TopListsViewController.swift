@@ -53,7 +53,7 @@ class TopListsViewController: ListTableViewController {
     }
     
     func setupUI() {
-        self.title = "Top Lists"
+        self.title = "Toplists"
         
         self.prepareTableView(style: .plain)
         
@@ -63,7 +63,7 @@ class TopListsViewController: ListTableViewController {
         self.tableView.dataSource = self
         
         
-        refreshControl.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         self.tableView.refreshControl = refreshControl
         
         
@@ -79,7 +79,7 @@ class TopListsViewController: ListTableViewController {
         self.footerActivityIndicatorView.color = .black
     }
  
-    @objc private func refreshTableView() {
+    @objc private func refresh() {
         self.presenter?.fetchTopLists(limit: minimumLimitRequest,
                                       page: pageRequest,
                                       type: .refresh)

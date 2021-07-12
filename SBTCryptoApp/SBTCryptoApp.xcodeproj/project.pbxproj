@@ -12,6 +12,8 @@
 		8F224DD8269C22F8002ACB72 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F224DD7269C22F8002ACB72 /* Toast.swift */; };
 		8F224DDB269C2860002ACB72 /* LatestNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F224DDA269C2860002ACB72 /* LatestNewsTableViewCell.xib */; };
 		8F224DDD269C286E002ACB72 /* LatestNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F224DDC269C286E002ACB72 /* LatestNewsTableViewCell.swift */; };
+		8F224DE0269C3393002ACB72 /* LatestNewsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F224DDF269C3393002ACB72 /* LatestNewsInteractorTests.swift */; };
+		8F224DE7269C6C58002ACB72 /* LatestNewsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F224DE6269C6C58002ACB72 /* LatestNewsPresenterTests.swift */; };
 		8F3732F226983DE100090615 /* TopListsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3732ED26983DE100090615 /* TopListsInteractor.swift */; };
 		8F3732F326983DE100090615 /* TopListsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3732F126983DE100090615 /* TopListsPresenter.swift */; };
 		8F3732F426983DE100090615 /* TopListsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3732EF26983DE100090615 /* TopListsProtocols.swift */; };
@@ -68,6 +70,8 @@
 		8F224DD7269C22F8002ACB72 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		8F224DDA269C2860002ACB72 /* LatestNewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LatestNewsTableViewCell.xib; sourceTree = "<group>"; };
 		8F224DDC269C286E002ACB72 /* LatestNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsTableViewCell.swift; sourceTree = "<group>"; };
+		8F224DDF269C3393002ACB72 /* LatestNewsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsInteractorTests.swift; sourceTree = "<group>"; };
+		8F224DE6269C6C58002ACB72 /* LatestNewsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsPresenterTests.swift; sourceTree = "<group>"; };
 		8F3732EC26983DE100090615 /* TopListsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsRouter.swift; sourceTree = "<group>"; };
 		8F3732ED26983DE100090615 /* TopListsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsInteractor.swift; sourceTree = "<group>"; };
 		8F3732EF26983DE100090615 /* TopListsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListsProtocols.swift; sourceTree = "<group>"; };
@@ -170,6 +174,15 @@
 				8F224DDC269C286E002ACB72 /* LatestNewsTableViewCell.swift */,
 			);
 			path = cells;
+			sourceTree = "<group>";
+		};
+		8F224DDE269C337F002ACB72 /* LatestNewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F224DDF269C3393002ACB72 /* LatestNewsInteractorTests.swift */,
+				8F224DE6269C6C58002ACB72 /* LatestNewsPresenterTests.swift */,
+			);
+			path = LatestNewsTests;
 			sourceTree = "<group>";
 		};
 		8F3732F82698439800090615 /* TopLists */ = {
@@ -294,6 +307,7 @@
 		8F904281269588DA00B2A550 /* SBTCryptoAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				8F224DDE269C337F002ACB72 /* LatestNewsTests */,
 				8F37330B2699F3FF00090615 /* TopListsTests */,
 				8F3733002699CCD500090615 /* EntityTests */,
 				8F904284269588DA00B2A550 /* Info.plist */,
@@ -607,9 +621,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F224DE7269C6C58002ACB72 /* LatestNewsPresenterTests.swift in Sources */,
 				8F3733062699F34900090615 /* TopListsInteractorTests.swift in Sources */,
 				8F3733022699CCF600090615 /* MapArrayTests.swift in Sources */,
 				8F37330A2699F3F500090615 /* TopListsRouterTests.swift in Sources */,
+				8F224DE0269C3393002ACB72 /* LatestNewsInteractorTests.swift in Sources */,
 				8F3733082699F3E800090615 /* TopListsPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
