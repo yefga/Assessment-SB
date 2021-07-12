@@ -5,4 +5,24 @@
 //  Created by Yefga on 11/07/21.
 //
 
-import Foundation
+import ObjectMapper
+
+public class News: Mappable {
+    
+    var id: String?
+    var title: String?
+    var body, categories, url: String?
+
+    public required init?(map: Map) {
+
+    }
+        
+    public func mapping(map: Map) {
+        id <- map["id"]
+        title <- map["title"]
+        body <- map["body"]
+        categories <- map["categories"]
+        url <- map["url"]
+    }
+    
+}
