@@ -39,7 +39,7 @@ class TopListsInteractor: TopListsPresenterToInteractorProtocol {
     
     weak var presenter: TopListsInteractorToPresenterProtocol?
     
-    func fetchTopLists(limit: Int, page: Int) {
+    func fetchTopLists(limit: Int, page: Int, type: LoadingType) {
         Alamofire
             .Session
             .default
@@ -49,7 +49,7 @@ class TopListsInteractor: TopListsPresenterToInteractorProtocol {
                 
                 switch response.result {
                 case .success(let model):
-                    self.presenter?.getItems(items: model.data, message: model.message)
+                    self.presenter?.getItems(items: model.data, message: model.message, type: type)
                     
                 case .failure(let error):
                     self.presenter?.gotFailed(response.data, error)

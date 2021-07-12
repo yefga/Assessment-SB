@@ -37,17 +37,18 @@ import UIKit
 class TopListsViewController: ListTableViewController {
 
     var presenter: TopListsViewToPresenterProtocol?
-        
-    private(set) var limit: Int = 10
-    private(set) var page: Int = 1
     
     let tableCell: UITableViewCell = TopListsTableViewCell()
-    
+    let refreshControl = UIRefreshControl()
+    let footerActivityIndicatorView = UIActivityIndicatorView(style: .medium)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
-        presenter?.fetchTopLists(limit: limit, page: page)
+        presenter?.fetchTopLists(limit: minimumLimitRequest,
+                                 page: pageRequest,
+                                 type: .initial)
         
     }
     
@@ -56,23 +57,64 @@ class TopListsViewController: ListTableViewController {
         
         self.prepareTableView(style: .plain)
         
-        self.tableView.register(UINib(nibName: tableCell.identifier, bundle: nil), forCellReuseIdentifier: tableCell.identifier)
+        self.tableView.register(UINib(nibName: tableCell.identifier,
+                                      bundle: nil), forCellReuseIdentifier: tableCell.identifier)
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        
+        refreshControl.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
+        self.tableView.refreshControl = refreshControl
+        
+        
+        let footerView = UIView(frame: CGRect(x: 0,
+                                              y: 0,
+                                              width: self.tableView.frame.width,
+                                              height: 80))
+        self.tableView.tableFooterView = footerView
+        
+        footerView.addSubview(footerActivityIndicatorView)
+        self.footerActivityIndicatorView.center = footerView.center
+        self.footerActivityIndicatorView.hidesWhenStopped = true
+        self.footerActivityIndicatorView.color = .black
     }
  
+    @objc private func refreshTableView() {
+        self.presenter?.fetchTopLists(limit: minimumLimitRequest,
+                                      page: pageRequest,
+                                      type: .refresh)
+    }
 }
 
 
 extension TopListsViewController: TopListsPresenterToViewProtocol {
     
-    func showLoading() {
-        self.showActivityIndicatorView()
+    func showLoading(_ type: LoadingType) {
+        switch type {
+            case .initial:
+                self.showActivityIndicatorView()
+            case .refresh:
+                self.refreshControl.beginRefreshing()
+            case .more:
+                self.footerActivityIndicatorView.startAnimating()
+        }
+        
     }
     
-    func refresh() {
-        self.hideActivityIndicatorView()
+    func hideLoading(_ type: LoadingType) {
+        switch type {
+        case .initial:
+            self.hideActivityIndicatorView()
+        case .refresh:
+            self.refreshControl.endRefreshing()
+        case .more:
+            self.footerActivityIndicatorView.stopAnimating()
+        }
         self.tableView.reloadData()
+    }
+    
+    func gotAnError(_ message: String) {
+        self.view.makeToast(message)
     }
 }
 
@@ -98,7 +140,7 @@ extension TopListsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tableCell.identifier, for: indexPath) as! TopListsTableViewCell
         
-        if let items = presenter?.listItems {
+        if let items = presenter?.listItems, items.count > 0 {
             cell.configure(item: items[indexPath.row])
         }
         
@@ -110,6 +152,12 @@ extension TopListsViewController: UITableViewDataSource {
 extension TopListsViewController {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        let offset = (scrollView.contentOffset.y - (scrollView.contentSize.height - scrollView.frame.size.height))
+        
+        if offset > 0, let page = self.presenter?.currentPage {
+            self.presenter?.fetchTopLists(limit: minimumLimitRequest, page: page + 10, type: .more)
+        }
         
     }
 

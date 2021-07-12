@@ -43,7 +43,8 @@ class TopListsPresenter: TopListsViewToPresenterProtocol {
     var router: TopListsPresenterToRouterProtocol?
 
     private var items: [CryptoCurrency] = []
-
+    private var page: Int = 0
+    
     var totalItems: Int {
         return items.count
     }
@@ -52,30 +53,56 @@ class TopListsPresenter: TopListsViewToPresenterProtocol {
         return items
     }
     
+    var currentPage: Int {
+        return page
+    }
+    
     var errorMessage: String = ""
     
-    func fetchTopLists(limit: Int, page: Int) {
-        view?.showLoading()
-        interactor?.fetchTopLists(limit: limit, page: page)
+    func fetchTopLists(limit: Int, page: Int, type: LoadingType) {
+        
+        view?.showLoading(type)
+
+        self.interactor?.fetchTopLists(limit: minimumLimitRequest,
+                                       page: type == .more ? self.page + 1 : page,
+                                       type: type)
+        
     }
     
 }
 
 extension TopListsPresenter: TopListsInteractorToPresenterProtocol {
     
-    func getItems(items: [CryptoCurrency]?, message: String?) {
+    func getItems(items: [CryptoCurrency]?, message: String?, type: LoadingType) {
+        
+        if type == .refresh {
+            self.items.removeAll()
+        }
+        
+        if type == .more {
+            self.page += 1
+        } else {
+            self.page = 1
+        }
+        
         if let items = items {
             items.forEach { item in
                 if !items.isEmpty && !self.items.contains(item) {
                     self.items.append(item)
                 }
             }
-            view?.refresh()
+            
+        } else if let errorMessage = message, errorMessage.lowercased() != "success" {
+            self.errorMessage = errorMessage
+            self.view?.gotAnError(errorMessage)
         }
+        
+        view?.hideLoading(type)
         
     }
     
     func gotFailed(_ data: Data?, _ error: Error) {
         self.errorMessage = error.localizedDescription
+        self.view?.gotAnError(errorMessage)
     }
 }
