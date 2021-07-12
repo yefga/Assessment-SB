@@ -74,11 +74,15 @@ public class Display: Mappable {
 public class Currency: Mappable {
     
     public var price: String?
+    public var change: String?
+    public var changePercent: String?
     
     required public init?(map: Map) {
     }
     
     public func mapping(map: Map) {
         price <- map["PRICE"]
+        change <- map["CHANGEHOUR"]
+        changePercent <- map["CHANGEPCTHOUR"]
     }
 }
